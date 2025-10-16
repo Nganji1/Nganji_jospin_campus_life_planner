@@ -1,0 +1,175 @@
+:root {
+  --bg: #F4E8DC;          
+  --text: #3B2C25;        
+  --accent: #8B5E3C;      
+  --surface: #DCC7B8;     
+  --border: #BFA38B;      
+  --pop: #D9764E;         
+  --radius: 10px;
+}
+
+h1{
+    font-family: "Times New Roman", Times, serif;
+}
+
+.body{
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Dark theme */
+body.dark {
+  --bg: #3B2C25;          
+  --text: #F4E8DC;        
+  --accent: #8B5E3C;      
+  --surface: #584B3E;     
+  --border: #7B5E4C;      
+  --pop: #D9764E;         
+}
+
+body {
+  font-family: "times new roman", Times, serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--accent);
+  color: var(--text);
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+  color: var(--text);
+}
+
+body.dark .toggle-btn {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.toggle-btn:hover {
+  background: var(--pop);
+  color: var(--bg);
+}
+
+main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+input, button {
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  background: var(--surface);
+  color: var(--text);
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--pop);
+  color: var(--bg);
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+  color: var(--text);
+}
+
+body.dark .task-item {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.task-item span {
+  display: block;
+}
+
+.task-item button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.task-item button:hover {
+  color: var(--pop);
+}
+
+.message {
+  color: var(--pop);
+  font-size: 0.9rem;
+  height: 1rem;
+  margin: 0;
+  padding-left: 2px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: var(--surface);
+  font-size: 0.9rem;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  color: var(--text);
+}
+@media (min-width: 700px) {
+  main {
+    padding: 2rem;
+  }
+}
