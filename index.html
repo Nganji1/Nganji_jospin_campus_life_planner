@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Life Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+      
+  <header role="banner">
+    <h1>Campus Life Planner</h1>
+    <p>Plan your  days with ease</p>
+    <button id="themeToggle" class="toggle-btn">Dark Mode</button>
+  </header>
+
+  <main id="main-content" role="main" tabindex="-1">
+    <section id="add-task-section" aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading">Add New Event / Task</h2>
+      <form id="taskForm" novalidate>
+        <label for="taskName">Event Name:</label>
+        <input
+          type="text"
+          id="taskName"
+          name="taskName"
+          placeholder="Basketball Game"
+          required
+          aria-describedby="taskNameHelp taskNameError"
+        />
+        
+        <span id="taskNameError" class="error-message" role="alert" aria-live="assertive"></span>
+
+        <label for="taskDuration">Event Time (H:M):</label>
+        <input
+          type="text"
+          id="taskDuration"
+          name="taskDuration"
+          placeholder="00:00"
+          required
+          aria-describedby="taskDurationHelp taskDurationError"
+        />
+        
+        <span id="taskDurationError" class="error-message" role="alert" aria-live="assertive"></span>
+
+        <label for="taskDate">Date:</label>
+        <input
+          type="date"
+          id="taskDate"
+          name="taskDate"
+          required
+          aria-describedby="taskDateError"
+        />
+        <span id="taskDateError" class="error-message" role="alert" aria-live="assertive"></span>
+
+        
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+
+        <button type="submit">Add Event</button>
+      </form>
+    </section>
+
+    <section id="search-section" aria-labelledby="search-heading">
+      <h2 id="search-heading">Search Events</h2>
+      <label for="searchInput" class="visually-hidden">Search events</label>
+      <input
+        type="text"
+        id="searchInput"
+        name="searchInput"
+        placeholder="Search by name..."
+        aria-describedby="searchResultsCount"
+      />
+      <p id="searchResultsCount" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="taskListSection" aria-labelledby="task-list-heading">
+      <h2 id="task-list-heading">My Events</h2>
+      <ul id="taskList" aria-live="polite" aria-atomic="true">
+    
+
+      </ul>
+    </section>
+
+    
+  </main>
+
+  <footer role="contentinfo">
+    <p>Make Each Activity Count</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
