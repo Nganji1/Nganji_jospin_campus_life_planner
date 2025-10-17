@@ -33,3 +33,6 @@ Each record is saved in `localStorage` as:
 ```json
 
 Below is the youtube video link explainig and showing the end result with a demo video."https://youtu.be/KZOfnS7FEEM"
+
+Deployment Github Pages.
+https://nganji1.github.io/Nganji_jospin_campus_life_planner/
